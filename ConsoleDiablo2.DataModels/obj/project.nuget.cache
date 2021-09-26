@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "Kg5GUXhAUW7P7WFHmfUjrjW8NDyUhEAGOj4Am5hW7EAlQJa6g21Y4MXsaAnbkhCjarwW8X55hb+M2JSqs40+aA==",
+  "success": true,
+  "projectFilePath": "F:\\ConsoleDiablo2\\Console-Diablo-Game\\ConsoleDiablo2.DataModels\\ConsoleDiablo2.DataModels.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

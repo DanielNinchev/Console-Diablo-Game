@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "UFCSas2AHfkQOxcjNSG1/UmB8Svt7RJaHU/gMrIVuVYn3K2CjGJQXRbG7TSH4z564S1M2xqqhgIug+/e5oHzXQ==",
+  "success": true,
+  "projectFilePath": "F:\\ConsoleDiablo2\\Console-Diablo-Game\\ConsoleDiablo2.Common\\ConsoleDiablo2.Common.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

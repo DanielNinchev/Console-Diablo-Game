@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30621.155
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleDiablo2.Data", "ConsoleDiablo2.Data\ConsoleDiablo2.Data.csproj", "{D6F9414B-770F-496F-A98F-11137FFBAD99}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleDiablo2.ConsoleApplication", "ConsoleDiablo2.ConsoleApplication\ConsoleDiablo2.ConsoleApplication.csproj", "{BA34AAA2-9BD3-48EF-953D-98F3195D8B11}"
+	ProjectSection(ProjectDependencies) = postProject
+		{984F9A58-9BE2-42EA-9287-982CC247F4B8} = {984F9A58-9BE2-42EA-9287-982CC247F4B8}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleDiablo2.Services", "ConsoleDiablo2.Services\ConsoleDiablo2.Services.csproj", "{D9B44AFE-107A-4693-868D-EE5FB5532F21}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleDiablo2.Common", "ConsoleDiablo2.Common\ConsoleDiablo2.Common.csproj", "{CA55D90F-4F92-4C39-9156-4A5F45EB3E8C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleDiablo2.DataModels", "ConsoleDiablo2.DataModels\ConsoleDiablo2.DataModels.csproj", "{984F9A58-9BE2-42EA-9287-982CC247F4B8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D6F9414B-770F-496F-A98F-11137FFBAD99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6F9414B-770F-496F-A98F-11137FFBAD99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6F9414B-770F-496F-A98F-11137FFBAD99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6F9414B-770F-496F-A98F-11137FFBAD99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA34AAA2-9BD3-48EF-953D-98F3195D8B11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA34AAA2-9BD3-48EF-953D-98F3195D8B11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA34AAA2-9BD3-48EF-953D-98F3195D8B11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA34AAA2-9BD3-48EF-953D-98F3195D8B11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9B44AFE-107A-4693-868D-EE5FB5532F21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9B44AFE-107A-4693-868D-EE5FB5532F21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9B44AFE-107A-4693-868D-EE5FB5532F21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9B44AFE-107A-4693-868D-EE5FB5532F21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA55D90F-4F92-4C39-9156-4A5F45EB3E8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA55D90F-4F92-4C39-9156-4A5F45EB3E8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA55D90F-4F92-4C39-9156-4A5F45EB3E8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA55D90F-4F92-4C39-9156-4A5F45EB3E8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{984F9A58-9BE2-42EA-9287-982CC247F4B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{984F9A58-9BE2-42EA-9287-982CC247F4B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{984F9A58-9BE2-42EA-9287-982CC247F4B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{984F9A58-9BE2-42EA-9287-982CC247F4B8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {378999F7-86EE-42BC-97AE-B899BED5A5C9}
+	EndGlobalSection
+EndGlobal
