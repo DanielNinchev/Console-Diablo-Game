@@ -2,35 +2,31 @@
 using ConsoleDiablo2.ConsoleApplication.Contracts.ConsoleEntities;
 using ConsoleDiablo2.ConsoleApplication.Contracts.ConsoleEntities.Factories;
 using ConsoleDiablo2.ConsoleApplication.Contracts.ConsoleEntities.Menus;
-using ConsoleDiablo2.DataModels;
 using ConsoleDiablo2.Services.Contracts;
 using System.Collections.Generic;
 
 namespace ConsoleDiablo2.ConsoleApplication.ConsoleEntities.Commands
 {
-    public class SelectItemCommand : IMenuCommand
+    public class BuyItemsMenuCommand : IMenuCommand
     {
         private IMenuFactory menuFactory;
-        private ICharacterService characterService;
+        private IItemService itemService;
 
-        public SelectItemCommand(IMenuFactory menuFactory, ICharacterService characterService)
+        public BuyItemsMenuCommand(IMenuFactory menuFactory, IItemService itemService)
         {
             this.menuFactory = menuFactory;
-            this.characterService = characterService;
+            this.itemService = itemService;
         }
         public IMenu Execute(params object[] args)
         {
-            int itemId = (int)args[0];
-            int characterId = 0;
+            int characterId = (int)args[0];
+            string command = args[1].ToString();
 
-            if (args.Length == 3)
-            {
-                characterId = (int)args[2];
-            }
+            List<int> itemIds = this.itemService.GenerateShopItemsForCharacter(characterId, command);
 
-            IInfoHoldingMenu menu = (IInfoHoldingMenu)menuFactory.CreateMenu(typeof(ItemMenu).Name);
+            IInfoHoldingMenu menu = (IInfoHoldingMenu)this.menuFactory.CreateMenu(typeof(ShopItemsMenu).Name);
 
-            menu.PassInformation(itemId, characterId);
+            menu.PassInformation(characterId, itemIds);
 
             return menu;
         }

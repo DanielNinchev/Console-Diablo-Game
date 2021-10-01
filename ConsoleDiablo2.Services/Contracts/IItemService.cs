@@ -10,6 +10,8 @@ namespace ConsoleDiablo2.Services.Contracts
 {
     public interface IItemService
     {
+        void BuyItemsWithCharacter(int characterId, int itemId);
+
         int CreateNewItem(string itemType, MonsterRank monsterRank);
 
         string DrawItemType();
@@ -22,6 +24,8 @@ namespace ConsoleDiablo2.Services.Contracts
 
         void DeleteItemFromDb(int itemId);
 
+        List<int> GenerateShopItemsForCharacter(int characterId, string command);
+
         IItem GetItemById(int itemId);
 
         int GetItemIdByItsName(string itemName);
@@ -31,6 +35,8 @@ namespace ConsoleDiablo2.Services.Contracts
         IEnumerable<ItemViewModel> GetAllItemViewModelsInGear(int gearId);
 
         IEnumerable<ItemViewModel> GetAllItemViewModelsInInventory(int inventoryId);
+
+        IEnumerable<Item> GetAllItemsForShop(List<int> shopItemIds);
 
         List<string> GetListOfSubclasses<T>() where T : class;
 

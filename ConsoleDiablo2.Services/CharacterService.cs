@@ -368,9 +368,9 @@ namespace ConsoleDiablo2.Services
             if (character.Level < character.Experience / 1000)
             {
                 character.HasLeveledUp = true;
-                character.Level += 10;
-                character.SkillPoints += 10;
-                character.StatusPoints += 10;
+                character.Level += 1;
+                character.SkillPoints += 1;
+                character.StatusPoints += 1;
             }
         }
 

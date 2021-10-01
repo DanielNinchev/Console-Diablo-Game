@@ -26,3 +26,17 @@ F:\ConsoleDiablo2\ConsoleDiablo2.Data\obj\Debug\netstandard2.1\ConsoleDiablo2.Da
 F:\ConsoleDiablo2\ConsoleDiablo2.Data\obj\Debug\netstandard2.1\ConsoleDiablo2.Data.AssemblyInfo.cs
 F:\ConsoleDiablo2\ConsoleDiablo2.Data\obj\Debug\netstandard2.1\ConsoleDiablo2.Data.csproj.CoreCompileInputs.cache
 F:\ConsoleDiablo2\ConsoleDiablo2.Data\obj\Debug\netstandard2.1\ConsoleDiablo2.Data.csproj.CopyComplete
+F:\ConsoleDiablo2\Console-Diablo-Game\ConsoleDiablo2.Data\bin\Debug\netstandard2.1\ConsoleDiablo2.Data.deps.json
+F:\ConsoleDiablo2\Console-Diablo-Game\ConsoleDiablo2.Data\bin\Debug\netstandard2.1\ConsoleDiablo2.Data.dll
+F:\ConsoleDiablo2\Console-Diablo-Game\ConsoleDiablo2.Data\bin\Debug\netstandard2.1\ConsoleDiablo2.Data.pdb
+F:\ConsoleDiablo2\Console-Diablo-Game\ConsoleDiablo2.Data\bin\Debug\netstandard2.1\ConsoleDiablo2.Common.dll
+F:\ConsoleDiablo2\Console-Diablo-Game\ConsoleDiablo2.Data\bin\Debug\netstandard2.1\ConsoleDiablo2.DataModels.dll
+F:\ConsoleDiablo2\Console-Diablo-Game\ConsoleDiablo2.Data\bin\Debug\netstandard2.1\ConsoleDiablo2.DataModels.pdb
+F:\ConsoleDiablo2\Console-Diablo-Game\ConsoleDiablo2.Data\bin\Debug\netstandard2.1\ConsoleDiablo2.Common.pdb
+F:\ConsoleDiablo2\Console-Diablo-Game\ConsoleDiablo2.Data\obj\Debug\netstandard2.1\ConsoleDiablo2.Data.csprojAssemblyReference.cache
+F:\ConsoleDiablo2\Console-Diablo-Game\ConsoleDiablo2.Data\obj\Debug\netstandard2.1\ConsoleDiablo2.Data.AssemblyInfoInputs.cache
+F:\ConsoleDiablo2\Console-Diablo-Game\ConsoleDiablo2.Data\obj\Debug\netstandard2.1\ConsoleDiablo2.Data.AssemblyInfo.cs
+F:\ConsoleDiablo2\Console-Diablo-Game\ConsoleDiablo2.Data\obj\Debug\netstandard2.1\ConsoleDiablo2.Data.csproj.CoreCompileInputs.cache
+F:\ConsoleDiablo2\Console-Diablo-Game\ConsoleDiablo2.Data\obj\Debug\netstandard2.1\ConsoleDiablo2.Data.csproj.CopyComplete
+F:\ConsoleDiablo2\Console-Diablo-Game\ConsoleDiablo2.Data\obj\Debug\netstandard2.1\ConsoleDiablo2.Data.dll
+F:\ConsoleDiablo2\Console-Diablo-Game\ConsoleDiablo2.Data\obj\Debug\netstandard2.1\ConsoleDiablo2.Data.pdb

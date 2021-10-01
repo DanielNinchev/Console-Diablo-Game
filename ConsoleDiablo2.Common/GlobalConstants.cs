@@ -42,5 +42,8 @@
 
         //Bonus
         public const string BonusString = "Bonus";
+
+        //Shop
+        public const int ShopMaxWeaponsForSale = 10;
     }
 }

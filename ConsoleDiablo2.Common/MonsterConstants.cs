@@ -4,7 +4,7 @@
     {
         //Monster
         public const int MonsterManaCostForAbility = 20;
-        public const int ExperienceGivenFromMonster = 20000;
+        public const int ExperienceGivenFromMonster = 1000;
         public const int MonsterStatsGradation = 15;
 
         public const int OrdinaryMonsterMinDamage = 10;

@@ -15,6 +15,7 @@
         public const string CharacterTypeIsNotACharacter = "{0} is not a character!";
         public const string InvalidCharacterType = "Character type {0} does not exist!";
         public const string InvalidCharacterName = "The character's name can include only letters (no numbers and symbols allowed)!";
+        public const string InsufficientFunds = "Insufficient funds! This item is too expensive for you!";
         public const string NotEnoughManaMessage = "Not enough mana!";
         public const string NotExperiencedEnoughForThisSkillMsg = "You are not experienced enough for this skill!";
         public const string ParentSkillNotDeveloped = "You need to develop {0} first in order to learn this skill!";

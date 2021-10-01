@@ -5,6 +5,8 @@ using ConsoleDiablo2.DataModels.Characters;
 using ConsoleDiablo2.DataModels.Enums;
 using ConsoleDiablo2.DataModels.Factories.Contracts;
 using ConsoleDiablo2.DataModels.Items.Contracts;
+using ConsoleDiablo2.DataModels.Items.DefensiveItems;
+using ConsoleDiablo2.DataModels.Items.Weapons;
 using ConsoleDiablo2.Services.Contracts;
 using ConsoleDiablo2.Services.ViewModels;
 
@@ -27,6 +29,66 @@ namespace ConsoleDiablo2.Services
             this.db = db;
             this.characterService = characterService;
             this.itemFactory = itemFactory;
+        }
+
+        public void BuyItemsWithCharacter(int characterId, int itemId)
+        {
+            var character = this.characterService.GetCharacterById(characterId);
+            var item = this.GetItemById(itemId);
+
+            if (character.GoldCoins < item.SellValue)
+            {
+                throw new ArgumentException(ExceptionMessages.InsufficientFunds);
+            }
+            else
+            {
+                this.PickItem(item.Id, characterId);
+                character.GoldCoins -= item.SellValue;
+
+                this.db.SaveChanges();
+            }
+        }
+
+        public List<int> GenerateShopItemsForCharacter(int characterId, string command)
+        {
+            var character = this.characterService.GetCharacterById(characterId);
+            MonsterRank monsterRank;
+            Type type;
+
+            if (command.Contains(typeof(Weapon).Name))
+            {
+                type = typeof(Weapon);
+            }
+            else
+            {
+                type = typeof(DefensiveEquipment);
+            }
+
+            if (character.Level <= 5)
+            {
+                monsterRank = MonsterRank.Ordinary;
+            }
+            else if (character.Level <= 15)
+            {
+                monsterRank = MonsterRank.Strong;
+            }
+            else
+            {
+                monsterRank = MonsterRank.Champion;
+            }
+
+            List<int> shopItemIds = new List<int>();
+            List<Type> items = Assembly.GetAssembly(type).GetTypes().Where(t => t.IsSubclassOf(type)).ToList();
+
+            for (int i = 0; i < GlobalConstants.ShopMaxWeaponsForSale; i++)
+            {
+                Random random = new Random();
+
+                int itemId = this.CreateNewItem(items[random.Next(0, items.Count - 1)].Name, monsterRank);
+                shopItemIds.Add(itemId);
+            }
+
+            return shopItemIds;
         }
 
         public int CreateNewItem(string itemType, MonsterRank monsterRank)
@@ -161,47 +223,6 @@ namespace ConsoleDiablo2.Services
 
             return types;
         }
-
-        //Gives the character his starting weapon (different for each type of character)
-        //public void GiveCharacterHisBasicGear(int characterId)
-        //{
-        //    var character = characterService.GetCharacterById(characterId);
-
-        //    if (character != null)
-        //    {
-        //        switch (character.GetType().Name)
-        //        {
-        //            case "Amazon":
-        //                int spearId = CreateNewItem(typeof(Spear).Name);
-        //                PutItemOn(spearId, characterId);
-        //                break;
-        //            case "Assassin":
-        //                int daggerId = CreateNewItem(typeof(Dagger).Name);
-        //                PutItemOn(daggerId, characterId);
-        //                break;
-        //            case "Barbarian":
-        //                int axeId = CreateNewItem(typeof(Axe).Name);
-        //                PutItemOn(axeId, characterId);
-        //                break;
-        //            case "Druid":
-        //                int scepterId = CreateNewItem(typeof(Scepter).Name);
-        //                PutItemOn(scepterId, characterId);
-        //                break;
-        //            case "Necromancer":
-        //                int wandId = CreateNewItem(typeof(Wand).Name);
-        //                PutItemOn(wandId, characterId);
-        //                break;
-        //            case "Paladin":
-        //                int swordId = CreateNewItem(typeof(Sword).Name);
-        //                PutItemOn(swordId, characterId);
-        //                break;
-        //            case "Sorceress":
-        //                int staffId = CreateNewItem(typeof(Staff).Name);
-        //                PutItemOn(staffId, characterId);
-        //                break;
-        //        }
-        //    }
-        //}
 
         public void MoveItemToInventory(int itemId, int characterId)
         {
@@ -433,6 +454,11 @@ namespace ConsoleDiablo2.Services
             {
                 throw new ArgumentException(ExceptionMessages.InventoryDoesNotExist);
             }
+        }
+
+        public IEnumerable<Item> GetAllItemsForShop(List<int> shopItemIds)
+        {
+            return db.Items.Where(i => shopItemIds.Contains(i.Id)).ToList();
         }
 
         private static Expression<Func<Item, ItemViewModel>> MapToItemViewModel()

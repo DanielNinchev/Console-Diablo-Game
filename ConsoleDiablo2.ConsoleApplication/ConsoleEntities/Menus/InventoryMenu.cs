@@ -156,7 +156,7 @@ namespace ConsoleDiablo2.ConsoleApplication.ConsoleEntities.Menus
         {
             this.Id = (int)info[0];
 
-            Open();
+            this.Open();
         }
 
         public override void Open()

@@ -1,6 +1,7 @@
 ﻿using ConsoleDiablo2.ConsoleApplication.Contracts.ConsoleEntities;
 using ConsoleDiablo2.ConsoleApplication.Contracts.ConsoleEntities.Factories;
 using ConsoleDiablo2.ConsoleApplication.Contracts.ConsoleEntities.Menus;
+using ConsoleDiablo2.DataModels;
 using ConsoleDiablo2.Services.Contracts;
 using ConsoleDiablo2.Services.ViewModels;
 
@@ -15,6 +16,7 @@ namespace ConsoleDiablo2.ConsoleApplication.ConsoleEntities.Menus
         private IItemService itemService;
         private ICommandFactory commandFactory;
         private ISession session;
+        private int characterId;
 
         private ItemViewModel itemViewModel;
 
@@ -39,7 +41,7 @@ namespace ConsoleDiablo2.ConsoleApplication.ConsoleEntities.Menus
 
                 IMenuCommand command = this.commandFactory.CreateCommand(commandName);
 
-                IMenu menu = command.Execute(this.Id);
+                IMenu menu = command.Execute(this.Id, this.characterId);
 
                 return menu;
             }
@@ -63,13 +65,20 @@ namespace ConsoleDiablo2.ConsoleApplication.ConsoleEntities.Menus
                     "Sell Item", secondButton, "Drop Item", "Back"
                 };
 
-                Position[] buttonPositions = new Position[]
+                if (this.session.History.Peek().GetType() == typeof(ShopItemsMenu))
                 {
-                    new Position(consoleCenter.Left - buttonContents[0].Length / 2, consoleCenter.Top + 15),    //Sell
-                    new Position(consoleCenter.Left - buttonContents[1].Length / 2, consoleCenter.Top + 16),    //Put on
-                    new Position(consoleCenter.Left - buttonContents[2].Length / 2, consoleCenter.Top + 17),    //Drop
-                    new Position(consoleCenter.Left - buttonContents[3].Length / 2, consoleCenter.Top + 19)    //Back
-                };
+                    buttonContents = new string[]
+                    {
+                        "Buy Item", "Back"
+                    };
+                }
+
+                Position[] buttonPositions = new Position[buttonContents.Length];
+
+                for (int i = 0; i < buttonContents.Length; i++)
+                {
+                    buttonPositions[i] = new Position(consoleCenter.Left - buttonContents[i].Length / 2, consoleCenter.Top + i + 15);
+                }
 
                 this.Buttons = new IButton[buttonContents.Length];
 
@@ -121,6 +130,11 @@ namespace ConsoleDiablo2.ConsoleApplication.ConsoleEntities.Menus
         public void PassInformation(params object[] info)
         {
             this.Id = (int)info[0];
+
+            if (info.Length > 1)
+            {
+                this.characterId = (int)info[1];
+            }
 
             Open();
         }
