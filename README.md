@@ -1,11 +1,13 @@
+**Console Diablo Game
+
 This is my first big project, written entirely on C#. It's purpose is to exercise my OOP skills. The app has some unfixed bugs and it's not entirely finished. I used Entity Framework Core in this project.
 
 Console Diablo is a console game, based on Diablo 2. Basically, after running the app and creating an account you start by creating a new character (Amazon, Assassin & Barbarian are the only characters that work properly at the moment). With your character you fight monsters who give you experience and drop items when they die. By increasing your experience you level up and develop your stats and skills to get stronger. The stronger you get, the stronger skills you can develop and the stronger monsters you fight. The stronger monsters you fight, the stronger items you get after they die. 
 
-CURRENT PROJECT STATUS:
-Since this project's purpose was only to exercise my OOP skills, the solutions of some problems could be done differently, but in some cases I chose the longer / harder way just for the exercise. There are bugs in the game - some buttons do not work yet (exit, multiplayer, fight boss, some back buttons, etc.). The item shop is not yet finished and the Druid, Necromancer, Paladin and Sorceress do not work properly yet. Some of the character skills may still have some bugs. 
+**CURRENT PROJECT STATUS
+Since this project was mainly for exercising purposes, the solutions of some problems could be done differently, but in some cases I chose the longer / harder way just for the exercise. There are bugs in the game - some buttons do not work yet (exit, multiplayer, fight boss, some back buttons, etc.). The item shop is not yet finished and the Druid, Necromancer, Paladin and Sorceress do not work properly yet. Some of the character skills may still have some bugs. 
 
-GAME FEATURES:
+**GAME FEATURES
 - Account:
 You can create an account and log out / log in. Each account is saved in the database and can have many characters and unique account name and password.
 
@@ -30,7 +32,7 @@ Each skill has one character and each character type has 12 unique skills. Skill
 - Bonuses:
 Each bonus has an item and each item can have many bonuses. Bonuses have values and descriptions and are saved in the database.
 
-GAME CONTROLS:
+**GAME CONTROLS
 - Up arrow - moves to the upper option;
 - Down arrow - moves to the option below;
 - Left arrow - moves to the left option;
@@ -40,5 +42,32 @@ GAME CONTROLS:
   1) marks an input field in order to write something; 
   2) unmarks the written input field in order to finish typing; 
   3) chooses an option;
+
+**SCREENSHOTS
+![image](https://user-images.githubusercontent.com/64807656/171390721-d44e209b-db18-402f-b250-95fa27fd004f.png)
+![image](https://user-images.githubusercontent.com/64807656/171390828-449f30ad-562e-4866-8433-affed2346665.png)
+![image](https://user-images.githubusercontent.com/64807656/171390895-b0ae3a05-0616-46c4-b139-d48addf1c81a.png)
+![image](https://user-images.githubusercontent.com/64807656/171391226-0f36b53f-56a1-4394-ad39-0a586c87dbe0.png)
+![image](https://user-images.githubusercontent.com/64807656/171391309-a4e53f9f-8514-4370-935e-721a0264a2f1.png)
+![image](https://user-images.githubusercontent.com/64807656/171391562-e2ffdf69-3d54-428b-89f1-dc1f8e54d8cd.png)
+![image](https://user-images.githubusercontent.com/64807656/171391492-a40efdd5-b5ef-4556-9e8b-09b11504b08e.png)
+![image](https://user-images.githubusercontent.com/64807656/171391680-8455178a-f1a4-40d1-ad01-864f0714d471.png)
+![image](https://user-images.githubusercontent.com/64807656/171391900-aafbd080-5cf1-43e7-a822-69fb44f22e16.png)
+![image](https://user-images.githubusercontent.com/64807656/171393055-021f4516-d873-4eca-a0a0-d95bcee17d52.png)
+![image](https://user-images.githubusercontent.com/64807656/171393239-316bcaab-9466-4fd5-965d-ab02453ec7e6.png)
+![image](https://user-images.githubusercontent.com/64807656/171393298-698cbaef-a0b2-41a8-abd0-33cedc27f0b3.png)
+![image](https://user-images.githubusercontent.com/64807656/171393362-87bddbc4-82dd-4ada-90e2-2addecd7a52c.png)
+![image](https://user-images.githubusercontent.com/64807656/171394227-39b95803-44b5-4366-a9dd-9e4d8b81d1b3.png)
+![image](https://user-images.githubusercontent.com/64807656/171394701-d24d8630-b42f-4a0a-9ec8-04e88da8f3e1.png)
+
+
+
+
+
+
+
+
+
+
 
 
