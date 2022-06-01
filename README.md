@@ -1,13 +1,13 @@
-#Console Diablo Game
+# Console Diablo Game
 
 This is my first big project, written entirely on C#. It's purpose is to exercise my OOP skills. The app has some unfixed bugs and it's not entirely finished. I used Entity Framework Core in this project.
 
 Console Diablo is a console game, based on Diablo 2. Basically, after running the app and creating an account you start by creating a new character (Amazon, Assassin & Barbarian are the only characters that work properly at the moment). With your character you fight monsters who give you experience and drop items when they die. By increasing your experience you level up and develop your stats and skills to get stronger. The stronger you get, the stronger skills you can develop and the stronger monsters you fight. The stronger monsters you fight, the stronger items you get after they die. 
 
-##CURRENT PROJECT STATUS
+## CURRENT PROJECT STATUS
 Since this project was mainly for exercising purposes, the solutions of some problems could be done differently, but in some cases I chose the longer / harder way just for the exercise. There are bugs in the game - some buttons do not work yet (exit, multiplayer, fight boss, some back buttons, etc.). The item shop is not yet finished and the Druid, Necromancer, Paladin and Sorceress do not work properly yet. Some of the character skills may still have some bugs. 
 
-##GAME FEATURES
+## GAME FEATURES
 - Account:
 You can create an account and log out / log in. Each account is saved in the database and can have many characters and unique account name and password.
 
@@ -32,7 +32,7 @@ Each skill has one character and each character type has 12 unique skills. Skill
 - Bonuses:
 Each bonus has an item and each item can have many bonuses. Bonuses have values and descriptions and are saved in the database.
 
-##GAME CONTROLS
+## GAME CONTROLS
 - Up arrow - moves to the upper option;
 - Down arrow - moves to the option below;
 - Left arrow - moves to the left option;
@@ -43,7 +43,7 @@ Each bonus has an item and each item can have many bonuses. Bonuses have values 
   2) unmarks the written input field in order to finish typing; 
   3) chooses an option;
 
-##SCREENSHOTS
+## SCREENSHOTS
 ![image](https://user-images.githubusercontent.com/64807656/171395057-3eba2a62-c04b-4a2b-8004-69cad04a7499.png)
 ![image](https://user-images.githubusercontent.com/64807656/171395121-6e07d41d-f756-4fa2-a186-679f781d9634.png)
 ![image](https://user-images.githubusercontent.com/64807656/171394701-d24d8630-b42f-4a0a-9ec8-04e88da8f3e1.png) 
